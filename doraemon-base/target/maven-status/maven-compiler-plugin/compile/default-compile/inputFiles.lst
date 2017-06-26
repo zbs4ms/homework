@@ -1,0 +1,10 @@
+/Users/zbs/code/github/doraemon-base/src/main/java/com/doraemon/base/Main.java
+/Users/zbs/code/github/doraemon-base/src/main/java/com/doraemon/base/util/RandomUtil.java
+/Users/zbs/code/github/doraemon-base/src/main/java/com/doraemon/base/util/StringReplace.java
+/Users/zbs/code/github/doraemon-base/src/main/java/com/doraemon/base/protocol/mail/MailConfig.java
+/Users/zbs/code/github/doraemon-base/src/main/java/com/doraemon/base/protocol/mail/SendMail.java
+/Users/zbs/code/github/doraemon-base/src/main/java/com/doraemon/base/redis/RedisConfig.java
+/Users/zbs/code/github/doraemon-base/src/main/java/com/doraemon/base/redis/DoraemonRedis.java
+/Users/zbs/code/github/doraemon-base/src/main/java/com/doraemon/base/redis/SimpleRedisImp.java
+/Users/zbs/code/github/doraemon-base/src/main/java/com/doraemon/base/redis/RedisClusterImp.java
+/Users/zbs/code/github/doraemon-base/src/main/java/com/doraemon/base/redis/RedisSentinelImp.java
