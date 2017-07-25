@@ -1,0 +1,9 @@
+2017-07-13 09:16:23.797 [http-nio-50001-exec-1] INFO  com.doraemon.monitor.controller.MessageController - User Id:null IP:127.0.0.1 params: {"message":["[{\"ip\":\"10.0.0.2\",\"status\":\"1\",\"time\":1499857563007},{\"ip\":\"10.10.20.206\",\"status\":\"0\",\"time\":1499857563015},{\"ip\":\"10.0.0.2\",\"status\":\"1\",\"time\":1499857623005},{\"ip\":\"10.10.20.206\",\"status\":\"0\",\"time\":1499857623014},{\"ip\":\"10.0.0.2\",\"status\":\"1\",\"time\":1499857683013},{\"ip\":\"10.10.20.206\",\"status\":\"0\",\"time\":1499857683025},{\"ip\":\"10.0.0.2\",\"status\":\"1\",\"time\":1499908523503},{\"ip\":\"10.10.20.206\",\"status\":\"1\",\"time\":1499908523504},{\"ip\":\"10.0.0.2\",\"status\":\"1\",\"time\":1499908563009},{\"ip\":\"10.10.20.206\",\"status\":\"0\",\"time\":1499908563132}]"]}
+2017-07-13 09:19:28.922 [Thread-5] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3bcbb589: startup date [Fri Jul 07 17:28:02 CST 2017]; root of context hierarchy
+2017-07-13 09:19:29.261 [Thread-5] INFO  o.s.context.support.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2017-07-13 09:19:29.362 [Thread-5] INFO  o.s.context.support.DefaultLifecycleProcessor - Stopping beans in phase 0
+2017-07-13 09:19:29.385 [Thread-5] INFO  o.s.b.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2017-07-13 09:19:29.389 [Thread-5] INFO  o.s.b.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans
+2017-07-13 09:19:29.407 [Thread-5] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2017-07-13 09:19:29.408 [Thread-5] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2017-07-13 09:19:29.630 [Thread-5] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
