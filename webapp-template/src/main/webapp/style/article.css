@@ -1,0 +1,402 @@
+* {
+    box-sizing: border-box
+}
+
+input, button:focus {
+    outline: none
+}
+
+article, aside, details, figcaption, figure, footer, header, nav, section, summary {
+    display: block
+}
+
+audio, canvas, video {
+    display: inline-block
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+
+[hidden], template {
+    display: none
+}
+
+html {
+    background: #fff;
+    color: #000;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+}
+
+html, button, input, select, textarea {
+    font-family: sans-serif
+}
+
+body {
+    margin: 0
+}
+
+a {
+    background: transparent
+}
+
+a:focus {
+    outline: thin dotted
+}
+
+a:hover, a:active {
+    outline: 0
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: 1em 0
+}
+
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0
+}
+
+h5 {
+    font-size: 0.83em;
+    margin: 1.67em 0
+}
+
+h6 {
+    font-size: 0.75em;
+    margin: 2.33em 0
+}
+
+abbr[title] {
+    border-bottom: 1px dotted
+}
+
+b, strong {
+    font-weight: bold
+}
+
+dfn {
+    font-style: italic
+}
+
+mark {
+    background: #ff0;
+    color: #000
+}
+
+code, kbd, pre, samp {
+    font-family: monospace, serif;
+    font-size: 1em
+}
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word
+}
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019"
+}
+
+q:before, q:after {
+    content: '';
+    content: none
+}
+
+small {
+    font-size: 80%
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sup {
+    top: -0.5em
+}
+
+sub {
+    bottom: -0.25em
+}
+
+img {
+    border: 0
+}
+
+svg:not(:root) {
+    overflow: hidden
+}
+
+figure {
+    margin: 0
+}
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em
+}
+
+legend {
+    border: 0;
+    padding: 0;
+    white-space: normal
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline
+}
+
+button, input {
+    line-height: normal
+}
+
+button, select {
+    text-transform: none
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer
+}
+
+button[disabled], input[disabled] {
+    cursor: default
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    box-sizing: content-box
+}
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+html {
+    position: relative;
+    font-size: 16px
+}
+
+html, body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-width: 80rem;
+    min-height: 45rem;
+    background: #f2f2f8
+}
+
+.nav-header-article {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 5rem;
+    z-index: 1000;
+    text-align: center;
+    background: #f7f7fb;
+    box-shadow: 0 0 20px #dedee3
+}
+
+.nav-header-article .nav-header-article-center {
+    position: relative;
+    display: inline-block;
+    padding: 0 1.25rem;
+    width: 80rem;
+    height: 100%;
+    font-size: 1.25rem;
+    line-height: 5rem;
+    text-align: left
+}
+
+.nav-header-article .article-btn-group {
+    position: relative;
+    bottom: .25rem;
+    float: right;
+    display: inline-block
+}
+
+.nav-header-article .article-btn {
+    width: 4.5rem;
+    height: 2.25rem;
+    padding: 0;
+    font-size: .875rem;
+    color: #333;
+    text-align: left;
+    background: none;
+    border: none
+}
+
+.nav-header-article .article-btn-primary {
+    width: 5.625rem;
+    height: 2.25rem;
+    padding: 0;
+    font-size: .875rem;
+    color: #fff;
+    line-height: 2.25rem;
+    font-family: 榛戜綋;
+    border: none;
+    border-radius: 1.125rem;
+    background: #ff0029
+}
+
+.main-page-article {
+    position: relative;
+    width: 80rem;
+    height: 100%;
+    padding: 6.25rem 6.25rem 5rem 6.25rem;
+    margin: 0 auto
+}
+
+.editor-zone {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0 6.25rem;
+    background: #fff
+}
+
+.editor-zone .editor-zone-header {
+    width: 100%;
+    height: 5rem;
+    font-size: 1.75rem;
+    line-height: 5rem;
+    border-bottom: 1px solid #e8e8e8
+}
+
+.editor-zone .add-btn-group {
+    height: 5rem;
+    line-height: 5rem
+}
+
+.editor-zone .add-btn-group .add-btn {
+    display: inline-block;
+    padding: 0 0 0 1.25rem;
+    margin-right: 2.5rem;
+    font-size: .875rem;
+    border: none;
+    background: none;
+    background-origin: padding-box
+}
+
+.editor-zone .add-btn-group .add-btn:nth-child(1) {
+    background: left center url(../img/add-img.png) no-repeat
+}
+
+.editor-zone .add-btn-group .add-btn:nth-child(2) {
+    background: left center url(../img/add-commodity.png) no-repeat
+}
+
+#editor-zone-main {
+    width: 100%;
+    height: 500px
+}
+
+#modal-mask {
+    position: fixed;
+    display: none;
+    background: #b2b2b2;
+    opacity: .5;
+    z-index: 1050
+}
+
+#modal-preview {
+    position: absolute;
+    top: 5rem;
+    overflow: auto;
+    left: 50%;
+    display: none;
+    width: 25rem;
+    padding: 0 1rem;
+    margin-left: -12.5rem;
+    font-size: .875rem;
+    background: #fff;
+    z-index: 1051
+}
+
+#modal-preview .preview-title {
+    font-size: 1.25rem
+}
+
+#modal-preview .author-name {
+    display: inline-block;
+    height: 2rem;
+    padding-left: 2rem;
+    font-size: .75rem;
+    line-height: 2rem;
+    background: 0.5rem center url(../img/author-name.png) no-repeat;
+    background-size: 1rem 1rem;
+    background-origin: padding-box
+}
+
+#modal-preview .comment {
+    display: inline-block;
+    float: right;
+    height: 2rem;
+    padding-left: 2rem;
+    font-size: .75rem;
+    line-height: 2rem;
+    background: 0.5rem center url(../img/good.png) no-repeat
+}
+
+#modal-preview .modal-img {
+    width: 100%
+}
+
+#modal-preview .modal-btn-favor {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    margin: 2rem auto;
+    border: none;
+    border-radius: 1.5rem;
+    background: center center url(../img/favor.png) no-repeat #ff0029;
+    background-size: 1.5rem 1.5rem
+}
+
+#modal-preview .modal-btn-favor span {
+    position: relative;
+    top: 2rem;
+    font-size: .75rem
+}

@@ -1,0 +1,433 @@
+@import "normalize";
+@import "variables";
+
+html {
+  position: relative;
+  font-size: 16px;
+}
+
+body {
+  position: relative;
+  min-width: 80rem;
+}
+
+.nav-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  background: $header-bg;
+  z-index: 1000;
+  text-align: center;
+  .nav-header-center {
+    position: relative;
+    display: inline-block;
+    width: $center-width;
+    height: 100%;
+    background: 1.3125rem center url("../img/hotr-logo.png") no-repeat;
+    .login-btn {
+      position: absolute;
+      top: 1.375rem;
+      right: 1.25rem;
+      width: 7.5rem;
+      height: 2.25rem;
+      padding: 0;
+      color: $text-color;
+      line-height: 2.25rem;
+      font-family: 黑体;
+      border: none;
+      border-radius: 1.125rem;
+      background: $login-btn-bg;
+    }
+    .user-information {
+      position: absolute;
+      right: 1.25rem;
+      height: 5rem;
+      line-height: 5rem;
+      .user-portrait {
+        position: relative;
+        bottom: .125rem;
+        display: inline-block;
+        vertical-align: middle;
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 1.125rem;
+        background: url(../img/user-portrait.png) no-repeat;
+      }
+      .username {
+        display: inline-block;
+        color: $text-color;
+      }
+      .user-btn {
+        display: inline-block;
+        padding: 0;
+        font-size: .875rem;
+        color: #b0b0b0;
+        background: none;
+        border: none;
+      }
+    }
+  }
+}
+
+.download-page {
+  position: relative;
+  width: 100%;
+  height: 62.5rem;
+  background: center url(../img/download-page.png) no-repeat;
+}
+
+.download-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 4.25rem;
+  width: 23.75rem;
+  height: 6.25rem;
+  padding: 0;
+  margin-left: -11.875rem;
+  background: right 1.6875rem center url(../img/download-btn.png) no-repeat $download-btn-bg;
+  border: none;
+  border-radius: 3.125rem;
+  & > span {
+    position: absolute;
+    left: 3rem;
+    color: $text-color;
+  }
+  .download-btn-en {
+    top: 1.25rem;
+    font-size: 1.6875rem;
+  }
+  .download-btn-cn {
+    bottom: 1.25rem;
+    font-size: 1.5rem;
+  }
+}
+
+.title {
+  position: relative;
+  top: 2.25rem;
+  margin: 0;
+  font-size: $font-size-title;
+  text-align: center;
+  line-height: 5rem;
+  font-family: 黑体;
+  font-weight: 800;
+}
+
+.content {
+  position: absolute;
+  bottom: 1.6875rem;
+  width: 100%;
+  margin: 0;
+  font-size: $font-size-content;
+  text-align: center;
+  line-height: 2.625rem;
+  font-family: 黑体;
+  font-weight: 800;
+}
+
+.main-page {
+  position: relative;
+  width: $center-width;
+  padding-top: 6.25rem;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.main-page-top {
+  position: relative;
+  width: $center-width;
+  height: $main-page-top-height;
+  margin: 0 auto;
+  background: url(../img/main-page-top.png) no-repeat;
+}
+
+.main-page-middle {
+  position: relative;
+  width: $center-width;
+  height: $main-page-middle-height;
+  margin: 0 auto;
+  background: url(../img/main-page-middle.png) no-repeat;
+}
+
+.main-page-bottom {
+  position: relative;
+  width: $center-width;
+  height: $main-page-bottom-height;
+  margin: 0 auto;
+  background: url(../img/main-page-bottom.png) no-repeat;
+  .title,
+  .content {
+    color: $text-color;
+  }
+}
+
+.communication {
+  width: $center-width;
+  height: 5.75rem;
+  margin: 0 auto;
+  background: $communication-bg;
+  text-align: center;
+  a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 4rem;
+    color: $text-color;
+    line-height: 5.75rem;
+    font-family: 黑体;
+    font-weight: 800;
+    text-decoration: none;
+  }
+}
+
+#modal-mask {
+  position: absolute;
+  display: none;
+  background: #b2b2b2;
+  opacity: .5;
+  z-index: 1050;
+}
+
+.form {
+  display: none;
+  position: absolute;
+  top: 13.375rem;
+  left: 50%;
+  width: 26.25rem;
+  margin-left: -13.125rem;
+  z-index: 1051;
+  .form-header {
+    width: 100%;
+    height: 10rem;
+    padding-top: 3.125rem;
+    background: $header-bg;
+    border-radius: .25rem;
+    .form-header-logo {
+      position: relative;
+      width: 11.125rem;
+      height: 3.75rem;
+      padding: 0 .625rem 0 4.375rem;
+      margin: 0 auto;
+      background: 0 0 url(../img/form-header-logo.png) no-repeat;
+      div:nth-child(1) {
+        line-height: 2.1875rem;
+        font-size: 1.25rem;
+        color: $text-color;
+        font-family: "黑体";
+        text-align: justify;
+        text-align-last: justify;
+      }
+      div:nth-child(2) {
+        line-height: 1.5rem;
+        font-size: .75rem;
+        color: #787878;
+        text-align: justify;
+        text-align-last: justify;
+        border-top: 1px solid #787878;
+      }
+    }
+  }
+  .form-main {
+    width: 100%;
+    padding: 2.75rem 4.357rem 2rem 4.375rem;
+    background: #fff;
+  }
+}
+
+.login-input {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0 1.25rem;
+  margin: 0 0 1rem 0;
+  line-height: 2.4375rem;
+  font-family: "黑体";
+  border-radius: 1.25rem;
+  border: .0625rem solid $input-color;
+}
+
+.validate {
+  width: 100%;
+  height: 2.5rem;
+  margin: 0 0 1rem 0;
+  & > input {
+    width: 9.75rem;
+  }
+  & > button {
+    float: right;
+    width: 6rem;
+    height: 2.5rem;
+    padding: 0;
+    font-size: .75rem;
+    color: #a6a6a7;
+    line-height: 2.4375rem;
+    border: 1px solid $input-color;
+    border-radius: 1.25rem;
+    background: #f2f2f8;
+  }
+}
+
+.login-input-active {
+  text-align: center;
+  color: $text-color;
+  border-color: $input-active;
+  background: $input-active;
+}
+
+.login-input-not-active {
+  text-align: center;
+  color: $input-active;
+  border-color: $text-color;
+  background: $text-color;
+}
+
+.login-content {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+  height: 1.3125rem;
+  font-size: .75rem;
+  color: $login-content;
+  line-height: 1.3125rem;
+  text-align: center;
+  hr {
+    position: absolute;
+    top: .625rem;
+    width: 2.5rem;
+    margin: 0;
+    border: none;
+    border-top: .0625rem solid $login-content;
+    z-index: 1;
+  }
+  hr:last-child {
+    right: 0;
+  }
+}
+
+.wechat {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  margin: 0 auto;
+  border: none;
+  border-radius: 1rem;
+  background: url(../img/wechat.png) no-repeat;
+  & > span {
+    position: relative;
+    top: 1.75rem;
+    font-size: .875rem;
+    color: $login-content;
+  }
+}
+
+.tab {
+  display: inline-block;
+  width: $tab;
+  height: 100px;
+  vertical-align: top;
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.tab-main {
+  display: inline-block;
+  width: $tab-main;
+  vertical-align: top;
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.tab-list {
+  width: 100%;
+  height: 3.75rem;
+  line-height: 3.75rem;
+  border-bottom: .0625rem solid $tab-list-border;
+  font-size: 1.25rem;
+  text-align: center;
+  color: $tab-list;
+  font-family: "黑体";
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.tab-list-active {
+  color: $tab-list-active;
+}
+
+.tab-main-list {
+  position: relative;
+  width: 100%;
+  height: 12rem;
+  padding: 0 1.25rem 0 25rem;
+  margin-top: 1.25rem;
+  background-origin: padding-box;
+  background: left 1.25rem bottom url(../img/article.png) no-repeat;
+}
+
+.tab-main-list-title {
+  font-size: 1.6875rem;
+  line-height: 2.8125rem;
+}
+
+.tab-main-list-content {
+  font-size: .875rem;
+  line-height: 1.375rem;
+  color: $tab-main-list-content-font;
+}
+
+.tab-main-list-comment {
+  position: absolute;
+  bottom: 0;
+  right: 1.25rem;
+  font-size: .75rem;
+  line-height: 2rem;
+  color: $tab-main-list-content-font;
+  span {
+    display: inline-block;
+    width: 5.375rem;
+    text-align: right;
+  }
+  span:nth-child(1) {
+    background: left 1.75rem center url(../img/good.png) no-repeat;
+  }
+  span:nth-child(2) {
+    background: left 1.75rem center url(../img/comment.png) no-repeat;
+  }
+}
+
+.nav-pagination {
+  height: 4.25rem;
+  margin: 4rem 0 0 1.25rem;
+}
+
+.pagination-previous,
+.pagination-list,
+.pagination-next,
+.pagination-more {
+  display: inline-block;
+  width: 1.625rem;
+  height: 1.625rem;
+  margin-right: .625rem;
+  font-size: .75rem;
+  color: $pagination-font;
+  line-height: 1.5rem;
+  text-align: center;
+  border: .0625rem solid $pagination-border;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.pagination-active {
+  color: $pagination-font-active;
+}
+
+.pagination-hidden {
+  display: none;
+}

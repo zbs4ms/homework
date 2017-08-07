@@ -6,6 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Data
@@ -24,6 +25,6 @@ public class Client {
     private List<Terminal> terminalList;
 
     @Transient  //门店可用值
-    private double clientUsability;
+    private BigDecimal clientUsability;
 
 }

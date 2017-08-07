@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <script src="./js/ueditor.config.js"></script>
+  <script src="./js/ueditor.all.min.js"></script>
+  <link rel="stylesheet" href="./style/article.css">
+  <style>
+    #edui1_toolbarbox {
+      display: none;
+    }
+
+    .edui-default .edui-editor {
+      border: none !important;
+    }
+  </style>
+  <title>article</title>
+</head>
+<body>
+<header class="nav-header-article">
+  <div class="nav-header-article-center">
+    原创文章
+    <div class="article-btn-group">
+      <button class="article-btn">保存</button>
+      <button class="article-btn" id="preview">预览</button>
+      <button class="article-btn-primary">发布</button>
+    </div>
+  </div>
+</header>
+<div class="main-page-article">
+  <div class="editor-zone">
+    <div class="editor-zone-header">标题</div>
+    <div class="add-btn-group">
+      <button class="add-btn">添加图片</button>
+      <button class="add-btn">添加商品</button>
+    </div>
+    <script id="editor" type="text/plain" style="width:100%;height:100%;"></script>
+  </div>
+</div>
+
+<div id="modal-mask"></div>
+<div id="modal-preview">
+  <h4 class="preview-title">让减肥事半功倍的超热卖瘦身书籍</h4>
+  <div class="author">
+    <span class="author-name">打肿脸充胖子</span>
+    <span class="comment">1234</span>
+  </div>
+  <p>除夕夜！</p>
+  <p>夜幕下我们每一个家庭相拥依偎在一起</p>
+  <p>一起欢度一年一度的春节！</p>
+  <p>没有比春节在中国人心里更重要的了</p>
+  <img class="modal-img" src="./img/timg.jpg">
+  <p>除夕夜！</p>
+  <p>夜幕下我们每一个家庭相拥依偎在一起</p>
+  <p>一起欢度一年一度的春节！</p>
+  <button class="modal-btn-favor">
+    <span>666次赞</span>
+  </button>
+</div>
+
+<script>
+  UE.getEditor('editor', {
+    autoClearinitialContent: true,
+    wordCount: false,
+    elementPathEnabled: false,
+    initialContent: "这里是正文",
+    initialFrameHeight: (parseInt(window.getComputedStyle(document.getElementsByClassName("editor-zone")[0], null).height) - 250)
+  });
+</script>
+<script>
+  var preview = document.getElementById("preview");
+  var modalMask = document.getElementById("modal-mask");
+  var modalPreview = document.getElementById("modal-preview");
+  preview.onclick = function () {
+    modalMask.style.width = window.innerWidth + "px";
+    modalMask.style.height = window.innerHeight + "px";
+    modalMask.style.top = document.body.scrollTop + "px";
+    modalMask.style.left = document.body.scrollLeft + "px";
+    modalMask.style.display = "block";
+    modalPreview.style.display = "block";
+    document.body.style.overflow = "hidden";
+  };
+  modalMask.onclick = function () {
+    this.style.display = "none";
+    modalPreview.style.display = "none";
+    document.body.style.overflow = "auto";
+  };
+</script>
+</body>
+</html>

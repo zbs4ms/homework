@@ -92,6 +92,7 @@ public class ConfigService {
             newTerminal.setTerminalIp(subIpsPro.getIp());
             newTerminal.setDeviceType(subIpsPro.getType());
             newTerminal.setClientIp(newClient.getIp());
+            newTerminal.setPhone(subIpsPro.getPhone());
             //保存 terminal
             Preconditions.checkState(terminalMapper.insert(newTerminal) == 1, "保存terminal失败.");
         }

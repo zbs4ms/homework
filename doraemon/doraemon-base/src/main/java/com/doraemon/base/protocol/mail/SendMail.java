@@ -6,15 +6,21 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 
+import javax.activation.DataHandler;
+import javax.mail.BodyPart;
+import javax.mail.Multipart;
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
 import java.io.*;
 import java.util.Date;
 import java.util.Properties;
 
 import com.doraemon.base.util.StringReplace;
+import org.springframework.stereotype.Service;
 
 /**
  * 发送邮件
@@ -176,6 +182,32 @@ public class SendMail {
         //设置显示的发件时间
         message.setSentDate(new Date());
         message.saveChanges();
+        return message;
+    }
+
+
+
+    private static MimeMessage createHtmlMail(Session session,MailConfig mailConfig, String subject, String content, String... values) throws Exception {
+        MimeMessage message = new MimeMessage(session);
+        message.setFrom(new InternetAddress(mailConfig.getFrom(), mailConfig.getFrom(), "UTF-8"));  //发件人
+        for (String toName : mailConfig.getTo().split(",")) {
+            message.setRecipient(MimeMessage.RecipientType.TO, new InternetAddress(toName, toName, "UTF-8")); //收件人
+        }
+        if (mailConfig.getCc() != null) {
+            for (String ccName : mailConfig.getCc().split(","))
+                message.setRecipient(MimeMessage.RecipientType.CC, new InternetAddress(ccName, ccName, "UTF-8")); //抄送（可选）
+        }
+        if (mailConfig.getBcc() != null) {
+            for (String bccName : mailConfig.getBcc().split(","))
+                message.setRecipient(MimeMessage.RecipientType.BCC, new InternetAddress(bccName, bccName, "UTF-8"));  //密送（可选）
+        }
+        message.setSubject(subject, "UTF-8"); //邮件主题
+        message.setSentDate(new Date());// 发送日期
+        Multipart mp = new MimeMultipart("related"); //related意味着可以发送html格式的邮件
+        BodyPart bodyPart = new MimeBodyPart();// 正文
+        bodyPart.setDataHandler(null);
+        mp.addBodyPart(bodyPart);
+        message.setContent(mp);
         return message;
     }
 

@@ -16,4 +16,6 @@ public class SubIpsPro {
     String nick;
     @ApiModelProperty(value = "设备类型(WAN/LAN/AP)")
     String type;
+    @ApiModelProperty(value = "店铺手机号码")
+    String phone;
 }

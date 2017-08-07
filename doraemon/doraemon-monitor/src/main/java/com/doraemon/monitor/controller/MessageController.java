@@ -82,7 +82,7 @@ public class MessageController extends BaseController {
                 dateBean = DateTool.create().getLastWeek();
                 break;
             case "D":
-                dateBean = DateTool.create().getDay();
+                dateBean = DateTool.create().getLastDay();
                 break;
             default:
                 throw new Exception("错误的类型");

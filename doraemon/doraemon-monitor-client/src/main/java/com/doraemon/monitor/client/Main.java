@@ -26,6 +26,7 @@ public class Main implements CommandLineRunner {
     UpdateConfigService updateConfigService;
 
     public static void main(String[] args) throws Exception {
+        System.out.println("---------->"+args[0]);
         SpringApplication app = new SpringApplication(Main.class);
         app.run();
     }

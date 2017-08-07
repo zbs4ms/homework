@@ -22,4 +22,14 @@ public class RedisTest {
     public void redis() throws InterruptedException {
         stringRedisTemplate.opsForValue().set("chat", "Hello from Redis!");
     }
+
+    @Autowired
+    RedisOperation redisOperation;
+
+    @Test
+    public void redis1() throws Exception {
+        redisOperation.usePool().get("aaa");
+        redisOperation.usePool().set("aaa","bbbb");
+        System.out.println("aaa = " + redisOperation.get("aaa"));
+    }
 }

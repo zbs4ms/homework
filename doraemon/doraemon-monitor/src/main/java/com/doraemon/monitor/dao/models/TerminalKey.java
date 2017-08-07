@@ -5,8 +5,9 @@ import javax.persistence.Id;
 @Data
 public class TerminalKey {
 
+    @Id
     private String clientIp;
-
+    @Id
     private String terminalIp;
 
 }
